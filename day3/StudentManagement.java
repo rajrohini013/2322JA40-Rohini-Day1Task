@@ -1,23 +1,23 @@
 package day3;
 
-import java.util.Scanner;
+class Person {
+    String name;
+}
 
-public class StudentManagement {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+class Employee extends Person {
+    double salary;
 
-        
-        System.out.print("Enter student name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Enter student marks: ");
-        int marks = sc.nextInt();
-
-        
-        System.out.println("\n--- Student Result ---");
+    void calculateSalary() {
+        salary = 50000;  // fixed salary
         System.out.println("Name: " + name);
-        System.out.println("Marks: " + marks);
+        System.out.println("Salary: " + salary);
+    }
+}
 
-        sc.close();
+public class Employee {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        e.name = "John";
+        e.calculateSalary();
     }
 }
